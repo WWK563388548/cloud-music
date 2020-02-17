@@ -19,6 +19,7 @@
     "@types/redux-immutable": "^4.0.1",
     "@types/redux-thunk": "^2.1.0",
     "@types/styled-components": "^4.4.3",
+    "@types/swiper": "^5.2.1",
     "immutable": "^4.0.0-rc.12",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -31,6 +32,7 @@
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.0.1",
+    "swiper": "^5.3.1",
     "typescript": "~3.7.2"
   },
   "scripts": {
