@@ -1,7 +1,16 @@
 // src/appliction/Recommend/index.tsx
 import React from 'react';
+import styled from'styled-components';
 import Slider from '../../components/slider';
 import RecommendList from '../../components/list';
+import Scroll from '../../components/scroll';
+
+export const Content = styled.div`
+  position: fixed;
+  top: 90px;
+  bottom: 0;
+  width: 100%;
+`;
 
 const Recommend = () => {
 
@@ -23,10 +32,14 @@ const Recommend = () => {
   });
 
   return (
-    <div>
-      <Slider bannerList={bannerList} />
-      <RecommendList recommendList={recommendList} />
-    </div>
+    <Content>
+      <Scroll className="list">
+        <div>
+          <Slider bannerList={bannerList} />
+          <RecommendList recommendList={recommendList} />
+        </div>
+      </Scroll>
+    </Content> 
   )
 }
 
