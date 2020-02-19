@@ -5,7 +5,8 @@ import "swiper/css/swiper.css";
 import Swiper from "swiper";
 
 type SliderType = {
-  id: number
+  id?: number
+  encodeId?: number
   imageUrl: string
 }
 
@@ -38,7 +39,7 @@ const Slider = ({ bannerList }: SliderProps) => {
           {
             bannerList.map (slider => {
               return (
-                <div className="swiper-slide" key={slider.id}>
+                <div className="swiper-slide" key={slider.encodeId}>
                   <div className="slider-nav">
                     <img src={slider.imageUrl} width="100%" height="100%" alt="推荐" />
                   </div>
