@@ -2,6 +2,7 @@ import { AxiosResponse } from 'axios';
 
 export const CHANGE_BANNER = 'CHANGE_BANNER';
 export const CHANGE_RECOMMEND_LIST = 'RECOMMEND_LIST';
+export const CHANGE_ENTER_LOADING = 'CHANGE_ENTER_LOADING';
 
 export interface BannerListItem {
   imageUrl: string
@@ -43,4 +44,9 @@ export interface ChangeRecommendList {
   data: RecommendListItem[]
 }
 
-export type RecommendActionType = ChangeBannerList | ChangeRecommendList
+export interface ChangeEnterLoading {
+  type: typeof CHANGE_ENTER_LOADING
+  data: boolean
+}
+
+export type RecommendActionType = ChangeBannerList | ChangeRecommendList | ChangeEnterLoading

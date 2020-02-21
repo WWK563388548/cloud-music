@@ -14,6 +14,11 @@ export const changeRecommendList = (data: RecommendListItem[] | void) => ({
   data: fromJS (data)
 });
 
+export const changeEnterLoading = (data: boolean) => ({
+  type: actionTypes.CHANGE_ENTER_LOADING,
+  data
+});
+
 export const getBannerList = () => {
   return (dispatch: Dispatch) => {
     axiosInstance
@@ -33,6 +38,7 @@ export const getRecommendList = () => {
     .get('/personalized')
     .then (({ result }: ReponseType ) => {
       dispatch (changeRecommendList (result));
+      dispatch (changeEnterLoading (false)); // 改变 loading
     }).catch ((e) => {
       alert(e);
       console.log ("推荐歌单数据传输错误");

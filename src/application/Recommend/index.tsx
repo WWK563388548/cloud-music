@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import Slider from '../../components/slider';
 import RecommendList from '../../components/list';
 import Scroll from '../../components/scroll';
+import Loading from '../../components/Loading';
 import * as actionTypes from '../../store/Recommend/actionCreators';
 
 export const Content = styled.div`
@@ -20,6 +21,7 @@ const Recommend = (props: any) => {
   const { 
     bannerList, 
     recommendList, 
+    enterLoading,
     // actions
     getBannerDataDispatch, 
     getRecommendListDataDispatch 
@@ -41,6 +43,7 @@ const Recommend = (props: any) => {
           <RecommendList recommendList={recommendListJS} />
         </div>
       </Scroll>
+      { enterLoading && <Loading /> }
     </Content> 
   )
 }
@@ -51,6 +54,7 @@ const mapStateToProps = (state: any) => ({
   // 不然每次 diff 比对 props 的时候都是不一样的引用，还是导致不必要的重渲染，属于滥用 immutable
   bannerList: state.getIn (['recommend', 'bannerList']),
   recommendList: state.getIn (['recommend', 'recommendList']),
+  enterLoading: state.getIn (['recommend', 'enterLoading'])
 });
 // 映射 dispatch 到 props 上
 const mapDispatchToProps = (dispatch: any) => {
