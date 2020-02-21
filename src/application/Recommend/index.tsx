@@ -28,8 +28,14 @@ const Recommend = (props: any) => {
   } = props;
 
   useEffect (() => {
-    getBannerDataDispatch ();
-    getRecommendListDataDispatch ();
+    // 如果页面有数据，则不发请求
+    // immutable 数据结构中长度属性 size
+    if (!bannerList.size){
+      getBannerDataDispatch ();
+    }
+    if (!recommendList.size){
+      getRecommendListDataDispatch ();
+    }
   }, []);
 
   const bannerListJS = bannerList ? bannerList.toJS () : [];
