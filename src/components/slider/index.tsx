@@ -37,9 +37,9 @@ const Slider = ({ bannerList }: SliderProps) => {
       <div className="slider-container">
         <div className="swiper-wrapper">
           {
-            bannerList.map (slider => {
+            bannerList.map ((slider, i) => {
               return (
-                <div className="swiper-slide" key={slider.encodeId}>
+                <div className="swiper-slide" key={slider.id || i}>
                   <div className="slider-nav">
                     <img src={slider.imageUrl} width="100%" height="100%" alt="推荐" />
                   </div>
