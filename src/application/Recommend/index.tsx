@@ -1,10 +1,11 @@
 // src/appliction/Recommend/index.tsx
 import React, { useEffect } from 'react';
 import styled from'styled-components';
+import { forceCheck } from 'react-lazyload';
+import { connect } from "react-redux";
 import Slider from '../../components/slider';
 import RecommendList from '../../components/list';
 import Scroll from '../../components/scroll';
-import { connect } from "react-redux";
 import * as actionTypes from '../../store/Recommend/actionCreators';
 
 export const Content = styled.div`
@@ -34,7 +35,7 @@ const Recommend = (props: any) => {
 
   return (
     <Content>
-      <Scroll className="list">
+      <Scroll className="list" onScroll={forceCheck}>
         <div>
           <Slider bannerList={bannerListJS} />
           <RecommendList recommendList={recommendListJS} />
