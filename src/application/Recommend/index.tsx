@@ -7,7 +7,10 @@ import Slider from '../../components/slider';
 import RecommendList from '../../components/list';
 import Scroll from '../../components/scroll';
 import Loading from '../../components/Loading';
-import * as actionTypes from '../../store/Recommend/actionCreators';
+import {
+  getBannerList,
+  getRecommendList,
+} from '../../store/Recommend/actionCreators';
 
 export const Content = styled.div`
   position: fixed;
@@ -66,10 +69,10 @@ const mapStateToProps = (state: any) => ({
 const mapDispatchToProps = (dispatch: any) => {
   return {
     getBannerDataDispatch () {
-      dispatch (actionTypes.getBannerList ());
+      dispatch (getBannerList ());
     },
     getRecommendListDataDispatch () {
-      dispatch (actionTypes.getRecommendList ());
+      dispatch (getRecommendList ());
     },
   }
 };

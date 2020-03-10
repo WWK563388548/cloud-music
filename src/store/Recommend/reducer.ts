@@ -1,6 +1,10 @@
-import * as actionTypes from './constants';
 import { fromJS } from 'immutable'; // 这里用到 fromJS 把 JS 数据结构转化成 immutable 数据结构
 import { RecommendActionType } from './types';
+import {
+  CHANGE_BANNER,
+  CHANGE_RECOMMEND_LIST,
+  CHANGE_ENTER_LOADING,
+} from './constants';
 
 const defaultState = fromJS ({
   bannerList: [],
@@ -10,11 +14,11 @@ const defaultState = fromJS ({
 
 export default (state = defaultState, action: RecommendActionType ) => {
   switch (action.type) {
-    case actionTypes.CHANGE_BANNER:
+    case CHANGE_BANNER:
       return state.set ('bannerList', action.data);
-    case actionTypes.CHANGE_RECOMMEND_LIST:
+    case CHANGE_RECOMMEND_LIST:
       return state.set ('recommendList', action.data);
-    case actionTypes.CHANGE_ENTER_LOADING:
+    case CHANGE_ENTER_LOADING:
         return state.set ('enterLoading', action.data);
     default:
       return state;
