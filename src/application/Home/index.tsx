@@ -11,7 +11,7 @@ const Home = (props : any) => {
     <div>
       <Top>
         <span className="iconfont menu">&#xe630;</span>
-        <span className="title">WebApp</span>
+        <span className="title">CloudMusic</span>
         <span className="iconfont search">&#xe7b3;</span>
       </Top>
       <Tab>
