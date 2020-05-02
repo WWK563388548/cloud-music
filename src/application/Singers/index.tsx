@@ -1,7 +1,7 @@
 // src/appliction/Singers/index.tsx
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { forceCheck } from 'react-lazyload';
+import LazyLoad, { forceCheck } from 'react-lazyload';
 import HorizontalList from '../../components/horizontalList';
 import Scroll from '../../components/scroll';
 import { categoryTypes, alphaTypes } from '../../lib/singersMockData';
@@ -91,7 +91,9 @@ const Singers = (props: any) => {
             return (
               <ListItem key={item.accountId+""+index}>
                 <div className="img_wrapper">
-                  <img src={`${item.picUrl}?param=300x300`} width="100%" height="100%" alt="music"/>
+                  <LazyLoad placeholder={<img width="100%" height="100%" src={require('../../assets/singer.png')} alt="music" />}>
+                    <img src={`${item.picUrl}?param=300x300`} width="100%" height="100%" alt="music"/>
+                  </LazyLoad>
                 </div>
                 <span className="name">{item.name}</span>
               </ListItem>
