@@ -21,6 +21,7 @@ import {
   changePullDownLoading, 
   getMoreRecommendSingerList 
 } from '../../store/Singers/actionCreators';
+import Loading from '../../components/Loading';
 
 interface SingerListItem {
   accountId: number
@@ -50,6 +51,7 @@ const Singers = (props: any) => {
     pullUpLoading,
     pullDownLoading,
     pageCount,
+    enterLoading,
     // actions
     getRecommendSingerListDispatch,
     updateDispatch,
@@ -125,13 +127,13 @@ const Singers = (props: any) => {
         >
           { renderSingerList () }
         </Scroll>
+        <Loading show={enterLoading} />
       </ListContainer>
     </NavContainer>
   )
 }
 
 const mapStateToProps = (state: any) => {
-  console.log('Singer list state', state);
   return ({
     singerList: state.getIn(['singers', 'singerList']),
     enterLoading: state.getIn(['singers', 'enterLoading']),
