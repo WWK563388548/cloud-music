@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { Track } from '../../store/Rank/types';
 
 interface ListProps {
   globalRank?: boolean
 }
 
 interface ListItemProps {
-  tracks: any[] // TODO: Need to change type
+  tracks: Track[]
 }
 
 export const Container = styled.div`

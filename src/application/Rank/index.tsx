@@ -9,7 +9,7 @@ import {
   SongList,
   Container,
   EnterLoading,
-} from './RankStyledComponents';
+} from './rankStyledComponents';
 import Scroll from '../../components/scroll';
 import { filterIndex, filterIdx } from '../../lib/utils';
 import { renderRoutes } from 'react-router-config';
