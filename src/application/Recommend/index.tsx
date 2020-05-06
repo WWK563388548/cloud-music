@@ -1,6 +1,7 @@
 // src/appliction/Recommend/index.tsx
 import React, { useEffect } from 'react';
 import styled from'styled-components';
+import { renderRoutes } from 'react-router-config';
 import { forceCheck } from 'react-lazyload';
 import { connect } from "react-redux";
 import Slider from '../../components/slider';
@@ -53,6 +54,7 @@ const Recommend = (props: any) => {
         </div>
       </Scroll>
       { enterLoading && <Loading /> }
+      { renderRoutes (props.route.routes) }
     </Content> 
   )
 }

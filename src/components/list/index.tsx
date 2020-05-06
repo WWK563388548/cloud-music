@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import LazyLoad from "react-lazyload";
 import { 
   ListWrapper,
@@ -14,19 +15,20 @@ interface RecommendListItem {
     name: string
 }
 
-interface RecommendListProps {
-    recommendList: RecommendListItem[]
-}
+const RecommendList = (props: any) => {
 
-const RecommendList = ({ recommendList }: RecommendListProps ) => {
+  const enterDetail = (id: number) => {
+    props.history.push(`/recommend/${id}`);
+  }
+
   return (
     <ListWrapper>
       <h1 className="title"> 推荐歌单 </h1>
       <List>
         {
-          recommendList.map ((item, index) => {
+          props.recommendList.map ((item: RecommendListItem, index: number) => {
             return (
-              <ListItem key={item.id + index}>
+              <ListItem key={item.id + index} onClick={() => enterDetail (item.id)}>
                 <div className="img_wrapper">
                   <div className="decorate"></div>
                     {/* 添加 param 可以减小请求的图片资源大小 */}
@@ -50,4 +52,4 @@ const RecommendList = ({ recommendList }: RecommendListProps ) => {
   );
   }
  
-export default React.memo (RecommendList)
+export default React.memo (withRouter(RecommendList));
