@@ -53,7 +53,7 @@ const Recommend = (props: any) => {
           <RecommendList recommendList={recommendListJS} />
         </div>
       </Scroll>
-      { enterLoading && <Loading /> }
+      {enterLoading && <Loading show={enterLoading} />}
       { renderRoutes (props.route.routes) }
     </Content> 
   )

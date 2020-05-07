@@ -78,7 +78,7 @@ const Rank = (props: any) => {
             { renderRankList(globalList, true) }
           { loading && (
             <EnterLoading>
-              <Loading />
+              <Loading show={loading} />
             </EnterLoading>
           )}
         </div>

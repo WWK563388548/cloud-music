@@ -148,7 +148,7 @@ const Album = (props: any) => {
             </div>  
           </Scroll>
         )}
-        { enterLoading && <Loading /> }
+        { enterLoading && <Loading show={enterLoading} /> }
       </Container>
     </CSSTransition>
   )
