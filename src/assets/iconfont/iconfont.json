@@ -6,6 +6,62 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1898816",
+      "name": "heart",
+      "font_class": "heart",
+      "unicode": "e6b3",
+      "unicode_decimal": 59059
+    },
+    {
+      "icon_id": "6900725",
+      "name": "add-new",
+      "font_class": "add-new",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "7173944",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e6f4",
+      "unicode_decimal": 59124
+    },
+    {
+      "icon_id": "7315895",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "9568053",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "380363",
+      "name": "play",
+      "font_class": "play",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "880316",
+      "name": "back",
+      "font_class": "back",
+      "unicode": "e6a9",
+      "unicode_decimal": 59049
+    },
+    {
+      "icon_id": "1111304",
+      "name": "收藏",
+      "font_class": "shoucangfill",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
       "icon_id": "980452",
       "name": "headphone",
       "font_class": "headphone",

@@ -84,7 +84,7 @@ const Album = (props: any) => {
                   <div className="decorate"></div>
                   <img src={albumData.coverImgUrl} alt=""/>
                   <div className="play_count">
-                    <i className="iconfont play">&#xe885;</i>
+                    <i className="iconfont play">&#xe634;</i>
                     <span className="count">{Math.floor(albumData.subscribedCount / 1000) / 10} 万 </span>
                   </div>
                 </div>
@@ -98,33 +98,32 @@ const Album = (props: any) => {
                   </div>
                 </div>
               </TopDesc>
-              {/* TODO: Need to update iconfont */}
               <Menu>
                 <div>
-                  <i className="iconfont">&#xe6ad;</i>
+                  <i className="iconfont">&#xe647;</i>
                   评论
                 </div>
                 <div>
-                  <i className="iconfont">&#xe86f;</i>
+                  <i className="iconfont">&#xe6b3;</i>
                   点赞
                 </div>
                 <div>
-                  <i className="iconfont">&#xe62d;</i>
+                  <i className="iconfont">&#xe627;</i>
                   收藏
                 </div>
                 <div>
-                  <i className="iconfont">&#xe606;</i>
+                  <i className="iconfont">&#xe6f4;</i>
                   更多
                 </div>
               </Menu>
               <SongList>
                 <div className="first_line">
                   <div className="play_all">
-                    <i className="iconfont">&#xe6e3;</i>
+                    <i className="iconfont">&#xe65e;</i>
                     <span > 播放全部 <span className="sum">(共 {albumData.tracks.length} 首)</span></span>
                   </div>
                   <div className="add_list">
-                    <i className="iconfont">&#xe62d;</i>
+                    <i className="iconfont">&#xe60a;</i>
                     <span > 收藏 ({getCount(albumData.subscribedCount)})</span>
                   </div>
                 </div>
