@@ -50,6 +50,9 @@ export const Top = styled.div`
       font-weight: bold;
       transform: rotate(90deg);
     }
+    .iconfont:before {
+      content: none;
+    }
   }
   .title {
     width: 70%;

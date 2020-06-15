@@ -33,7 +33,7 @@ const NormalPlayer = ({ song }: Props) => {
       <div className="background layer"></div>
       <Top className="top">
         <div className="back">
-          <i className="iconfont icon-back">&#xe662;</i>
+          <i className="iconfont icon-back">&#xe649;</i>
         </div>
         <h1 className="title">{song.name}</h1>
         <h1 className="subtitle">{getName(song.ar)}</h1>

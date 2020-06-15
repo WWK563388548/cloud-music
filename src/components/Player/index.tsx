@@ -1,5 +1,6 @@
 import React from "react";
 import MiniPlayer from './miniPlayer';
+import NormalPlayer from './normalPlayer';
 
 const Player = () => {
   const currentSong = {
@@ -10,7 +11,7 @@ const Player = () => {
 
   return (
     <div>
-      <MiniPlayer song={currentSong} />
+      <NormalPlayer song={currentSong} />
     </div>
   )
 }
