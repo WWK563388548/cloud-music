@@ -3,6 +3,7 @@ import React from 'react';
 import { renderRoutes } from "react-router-config";
 import { NavLink } from 'react-router-dom'; // 利用 NavLink 组件进行路由跳转
 import { Top, Tab, TabItem } from './homeStyledComponents';
+import Player from '../../components/Player';
 
 const Home = (props : any) => {
   const { route } = props;
@@ -32,6 +33,7 @@ const Home = (props : any) => {
         </NavLink>
       </Tab>
       { renderRoutes (route.routes) }
+      <Player />
     </div>
   )
 }
