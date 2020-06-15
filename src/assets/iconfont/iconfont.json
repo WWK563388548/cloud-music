@@ -6,6 +6,48 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1410413",
+      "name": "loop",
+      "font_class": "loop",
+      "unicode": "e690",
+      "unicode_decimal": 59024
+    },
+    {
+      "icon_id": "8555249",
+      "name": "play-list-fill",
+      "font_class": "play-list-fill",
+      "unicode": "e70f",
+      "unicode_decimal": 59151
+    },
+    {
+      "icon_id": "10562548",
+      "name": "Player, pause",
+      "font_class": "Playerpause",
+      "unicode": "e6b1",
+      "unicode_decimal": 59057
+    },
+    {
+      "icon_id": "14464864",
+      "name": "player-pause-circle",
+      "font_class": "player-pause-circle",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "14464868",
+      "name": "player-skip-back",
+      "font_class": "player-skip-back",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "14464869",
+      "name": "player-skip-forward",
+      "font_class": "player-skip-forward",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
       "icon_id": "1898816",
       "name": "heart",
       "font_class": "heart",
